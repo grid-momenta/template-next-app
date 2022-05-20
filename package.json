@@ -11,6 +11,7 @@
 		"prettier:check": "prettier --check .",
 		"prettier:fix": "prettier --write .",
 		"test": "jest",
+		"test:ci": "jest --coverage --silent --ci",
 		"prepare": "husky install",
 		"lint-staged": "lint-staged"
 	},
