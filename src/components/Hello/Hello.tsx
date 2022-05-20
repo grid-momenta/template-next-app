@@ -1,6 +1,6 @@
-import React from "react";
+import React, { ReactElement } from "react";
 
-function Hello() {
+function Hello(): ReactElement {
 	return <div>Hello</div>;
 }
 
