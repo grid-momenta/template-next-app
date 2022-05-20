@@ -5,14 +5,13 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ test ]
+    branches: [test]
   pull_request:
     branches: "*"
 
 jobs:
   build:
-
-    runs-on: {{matrix.os}}
+    runs-on: ${{matrix.os}}
 
     strategy:
       matrix:
@@ -21,12 +20,12 @@ jobs:
         os: [ubuntu-latest, windows-latest, macos-latest]
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: npm run lint
-    - run: npm run test:ci
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run test:ci
