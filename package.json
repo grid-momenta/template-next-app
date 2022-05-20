@@ -7,6 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "prettier": "prettier --list-different .",
+    "prettier:check": "prettier --check .",
+    "prettier:fix": "prettier --write .",
     "test": "jest",
     "prepare": "husky install"
   },
