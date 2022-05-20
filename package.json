@@ -1,5 +1,6 @@
 {
-	"name": "template-next-app",
+	"name": "@grid-momenta/template-next-app",
+	"author": "DHN Chandan",
 	"version": "0.2.0",
 	"private": true,
 	"scripts": {
@@ -10,6 +11,9 @@
 		"prettier": "prettier --list-different .",
 		"prettier:check": "prettier --check .",
 		"prettier:fix": "prettier --write .",
+		"cz": "git cz",
+		"cz:install": "commitizen init cz-conventional-changelog --yarn --dev --exact",
+		"cz:force": "commitizen init cz-conventional-changelog --yarn --dev --exact --force",
 		"test": "jest",
 		"test:ci": "jest --coverage --silent --ci",
 		"prepare": "husky install",
@@ -30,6 +34,8 @@
 		"@types/node": "^17.0.35",
 		"@types/react": "^18.0.9",
 		"@types/react-dom": "^18.0.4",
+		"commitizen": "^4.2.4",
+		"cz-conventional-changelog": "^3.3.0",
 		"eslint": "^8.15.0",
 		"eslint-config-next": "^12.1.6",
 		"eslint-plugin-jest": "^26.2.2",
@@ -45,5 +51,10 @@
 	"lint-staged": {
 		"*.(ts|tsx)": "eslint --cache --fix",
 		"*": "prettier --write --ignore-unknown"
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
 	}
 }
