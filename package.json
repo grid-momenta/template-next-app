@@ -1,47 +1,47 @@
 {
-  "name": "template-next-app",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "prettier": "prettier --list-different .",
-    "prettier:check": "prettier --check .",
-    "prettier:fix": "prettier --write .",
-    "test": "jest",
-    "prepare": "husky install"
-  },
-  "dependencies": {
-    "next": "^12.1.6",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0"
-  },
-  "devDependencies": {
-    "@rushstack/eslint-config": "^2.6.0",
-    "@testing-library/dom": "^8.13.0",
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.2.0",
-    "@testing-library/user-event": "^14.2.0",
-    "@types/jest": "^27.5.1",
-    "@types/node": "^17.0.35",
-    "@types/react": "^18.0.9",
-    "@types/react-dom": "^18.0.4",
-    "eslint": "^8.15.0",
-    "eslint-config-next": "^12.1.6",
-    "eslint-plugin-jest": "^26.2.2",
-    "eslint-plugin-testing-library": "^5.5.0",
-    "husky": ">=8",
-    "jest": "^28.1.0",
-    "jest-environment-jsdom": "^28.1.0",
-    "lint-staged": ">=12",
-    "prettier": "^2.6.2",
-    "ts-jest": "^28.0.2",
-    "typescript": "^4.6.4"
-  },
-  "lint-staged": {
-    "*.js": "eslint --cache --fix",
-    "*.{js,css,md}": "prettier --write"
-  }
+	"name": "template-next-app",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"prettier": "prettier --list-different .",
+		"prettier:check": "prettier --check .",
+		"prettier:fix": "prettier --write .",
+		"test": "jest",
+		"prepare": "husky install"
+	},
+	"dependencies": {
+		"next": "^12.1.6",
+		"react": "^18.1.0",
+		"react-dom": "^18.1.0"
+	},
+	"devDependencies": {
+		"@rushstack/eslint-config": "^2.6.0",
+		"@testing-library/dom": "^8.13.0",
+		"@testing-library/jest-dom": "^5.16.4",
+		"@testing-library/react": "^13.2.0",
+		"@testing-library/user-event": "^14.2.0",
+		"@types/jest": "^27.5.1",
+		"@types/node": "^17.0.35",
+		"@types/react": "^18.0.9",
+		"@types/react-dom": "^18.0.4",
+		"eslint": "^8.15.0",
+		"eslint-config-next": "^12.1.6",
+		"eslint-plugin-jest": "^26.2.2",
+		"eslint-plugin-testing-library": "^5.5.0",
+		"husky": ">=8",
+		"jest": "^28.1.0",
+		"jest-environment-jsdom": "^28.1.0",
+		"lint-staged": ">=12",
+		"prettier": "^2.6.2",
+		"ts-jest": "^28.0.2",
+		"typescript": "^4.6.4"
+	},
+	"lint-staged": {
+		"*.js": "eslint --cache --fix",
+		"*.{js,css,md}": "prettier --write"
+	}
 }
