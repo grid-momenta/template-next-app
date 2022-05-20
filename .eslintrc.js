@@ -4,8 +4,9 @@ module.exports = {
 	extends: [
 		"@rushstack/eslint-config/profile/web-app",
 		"@rushstack/eslint-config/mixins/react",
-    "plugin:jest/recommended",
-    "plugin:jest/style"
+		"plugin:jest/recommended",
+		"plugin:jest/style",
+		"plugin:testing-library/react",
 	],
 	parserOptions: { tsconfigRootDir: __dirname },
 	settings: {
