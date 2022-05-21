@@ -38,11 +38,11 @@ jobs:
       - name: Build App
         run: yarn build
 
-      - name: Test cypress
-        run: yarn test:e2e
+      # - name: Test cypress
+      #   run: yarn test:e2e
 
-      # - name: Cypress.io
-      #   uses: cypress-io/github-action@v3
-      #   with:
-      #     start: yarn start
-      #     wait-on: "http://localhost:3000"
+      - name: Cypress.io
+        uses: cypress-io/github-action@v3
+        with:
+          start: yarn start
+          wait-on: "http://localhost:3000"
