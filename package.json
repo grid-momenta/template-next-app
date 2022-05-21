@@ -15,7 +15,8 @@
 		"cz:force": "commitizen init cz-conventional-changelog --yarn --dev --exact --force",
 		"test": "jest",
 		"test:ci": "jest --coverage --silent --ci",
-		"test:e2e": "cypress open",
+		"test:cypress": "cypress open",
+		"test:e2e": "start-server-and-test dev 3000 test:cypress",
 		"prepare": "husky install",
 		"lint-staged": "lint-staged"
 	},
