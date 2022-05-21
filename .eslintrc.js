@@ -7,15 +7,16 @@ module.exports = {
 		"plugin:jest/recommended",
 		"plugin:jest/style",
 		"plugin:testing-library/react",
+		"prettier",
 	],
-	parserOptions: { tsconfigRootDir: __dirname },
+	parserOptions: {
+		tsconfigRootDir: __dirname,
+		project: ["./tsconfig.eslint.json"],
+	},
 	settings: {
 		react: {
 			version: "17.9",
 		},
-	},
-	parserOptions: {
-		project: "./tsconfig.json",
 	},
 	rules: {
 		"@typescript-eslint/naming-convention": [
