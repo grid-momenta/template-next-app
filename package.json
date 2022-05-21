@@ -15,6 +15,7 @@
 		"cz:force": "commitizen init cz-conventional-changelog --yarn --dev --exact --force",
 		"test": "jest",
 		"test:ci": "jest --coverage --silent --ci",
+		"test:e2e": "cypress open",
 		"prepare": "husky install",
 		"lint-staged": "lint-staged"
 	},
@@ -34,6 +35,7 @@
 		"@types/react": "^18.0.9",
 		"@types/react-dom": "^18.0.4",
 		"commitizen": "^4.2.4",
+		"cypress": "^9.6.1",
 		"cz-conventional-changelog": "^3.3.0",
 		"eslint": "^8.15.0",
 		"eslint-config-next": "^12.1.6",
