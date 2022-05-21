@@ -6,6 +6,6 @@ context("Home Page", () => {
 	});
 
 	it("should display welcome message", () => {
-		cy.get("h1").contains("Welcome");
+		cy.get("title").contains("Welcome");
 	});
 });
