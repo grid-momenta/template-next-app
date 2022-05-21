@@ -36,5 +36,7 @@ module.exports = {
 				format: ["PascalCase"],
 			},
 		],
+
+		"jest/expect-expect": "off",
 	},
 };
