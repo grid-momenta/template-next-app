@@ -4,25 +4,25 @@
 name: NPM Package Publish
 
 on:
-#   release:
-#     types: [created]
+  #   release:
+  #     types: [created]
   push:
     branches:
       - publish
 
 jobs:
-#   build:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v3
-#       - uses: actions/setup-node@v3
-#         with:
-#           node-version: 16
-#       - run: npm ci
-#       - run: npm test
+  #   build:
+  #     runs-on: ubuntu-latest
+  #     steps:
+  #       - uses: actions/checkout@v3
+  #       - uses: actions/setup-node@v3
+  #         with:
+  #           node-version: 16
+  #       - run: npm ci
+  #       - run: npm test
 
   publish-npm:
-#     needs: build
+    #     needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -30,8 +30,8 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-          scope: '@grid-momenta'
-      - run: npm test:ci
+          scope: "@grid-momenta"
+      - run: npm run test:ci
       - run: npm publish -access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_ACCCESS_TOKEN}}
