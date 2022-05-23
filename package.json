@@ -1,7 +1,7 @@
 {
 	"name": "@grid-momenta/template-next-app",
 	"author": "DHN Chandan",
-	"version": "1.0.0",
+	"version": "0.0.0-development",
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
@@ -18,7 +18,8 @@
 		"test:cypress": "cypress open",
 		"test:e2e": "start-server-and-test dev 3000 test:cypress",
 		"prepare": "husky install",
-		"lint-staged": "lint-staged"
+		"lint-staged": "lint-staged",
+		"semantic-release": "semantic-release --branches publish"
 	},
 	"dependencies": {
 		"next": "^12.1.6",
@@ -51,7 +52,8 @@
 		"prettier": "^2.6.2",
 		"start-server-and-test": "^1.14.0",
 		"ts-jest": "^28.0.2",
-		"typescript": "^4.6.4"
+		"typescript": "^4.6.4",
+		"semantic-release": "^19.0.2"
 	},
 	"lint-staged": {
 		"*.(ts|tsx)": "eslint --cache --fix",
@@ -61,5 +63,9 @@
 		"commitizen": {
 			"path": "./node_modules/cz-conventional-changelog"
 		}
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/grid-momenta/template-next-app.git"
 	}
 }
