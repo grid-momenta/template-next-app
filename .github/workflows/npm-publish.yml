@@ -34,7 +34,7 @@ jobs:
           scope: "@grid-momenta"
       - name: Install npm dependencies
         run: yarn install --frozen-lockfile
-      - run: yarn test:ci
-      - run: npm publish -access public
+      # - run: yarn test:ci
+      - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
