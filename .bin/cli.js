@@ -2,9 +2,9 @@
 
 const { execSync } = require("child_process");
 
-const runCommand = (command, args) => {
+const runCommand = (command) => {
 	try {
-		execSync(`${command} ${args.join(" ")}`, { stdio: "inherit" });
+		execSync(command, { stdio: "inherit" });
 	} catch (error) {
 		console.error(`Failed to execute ${command}`, error);
 		return false;
