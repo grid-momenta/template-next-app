@@ -1,7 +1,7 @@
 {
 	"name": "@grid-momenta/template-next-app",
 	"author": "DHN Chandan",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
