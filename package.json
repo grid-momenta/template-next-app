@@ -20,8 +20,8 @@
 		"prepare": "husky install",
 		"lint-staged": "lint-staged",
 		"semantic-release": "semantic-release --branches publish",
-		"publish:np": "np --branch=master --message=\"chore: Publish v%s tag\"",
-		"publish:np:false": "np --branch=master --message=\"chore: Publish v%s tag\" --publish=false"
+		"publish:np": "np --branch=master --message=\"chore: :bookmark: Publish v%s tag\"",
+		"publish:np:false": "np --branch=master --message=\"chore: :bookmark: Publish v%s tag\" --publish=false"
 	},
 	"dependencies": {
 		"next": "^12.1.6",
