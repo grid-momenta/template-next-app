@@ -19,7 +19,8 @@
 		"test:e2e": "start-server-and-test dev 3000 test:cypress",
 		"prepare": "husky install",
 		"lint-staged": "lint-staged",
-		"semantic-release": "semantic-release --branches publish"
+		"semantic-release": "semantic-release --branches publish",
+		"publish:np": "np --branch=master --message=\"chore: Publish v%s tag\" --publish=false"
 	},
 	"dependencies": {
 		"next": "^12.1.6",
