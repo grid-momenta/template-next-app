@@ -6,3 +6,5 @@ playground/dist
 **/*.md
 
 coverage
+
+.next
