@@ -36,3 +36,10 @@ yarn-error.log*
 
 .eslintcache
 .npmrc
+
+# rush monorepo
+/.rush/**
+
+# ide folders
+.idea
+.vscode
