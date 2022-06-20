@@ -31,9 +31,6 @@ const About: NextPage = (props) => {
 
 export const getServerSideProps: GetServerSideProps = wrapper.getServerSideProps((store) => async (context) => {
 	store.dispatch(productIncrement(5));
-	console.log("===================");
-	console.log(context);
-	console.log("===================");
 
 	return {
 		props: {
