@@ -2,7 +2,7 @@
 	"name": "@grid-momenta/template-next-app",
 	"description": "A starter template for next.js apps with TypeScript, Jest, React Testing Library, Cypress, Eslint, Prettier, Husky, Commitizen, Semantic Release etc.",
 	"author": "DHN Chandan",
-	"version": "1.0.8",
+	"version": "1.1.0",
 	"bin": "./.bin/cli.js",
 	"scripts": {
 		"dev": "next dev",
