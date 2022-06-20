@@ -1,11 +1,11 @@
 import { configureStore, Store } from "@reduxjs/toolkit";
 import { createWrapper } from "next-redux-wrapper";
 import logger from "redux-logger";
-import rootReducer from "./rootReducer";
 import { AppStore } from "./types";
+import { masterReducer } from "./rootReducer";
 
 export const store: Store = configureStore({
-	reducer: rootReducer,
+	reducer: masterReducer,
 	middleware: (getDefaultMiddleware) =>
 		getDefaultMiddleware({
 			serializableCheck: false,
@@ -14,6 +14,7 @@ export const store: Store = configureStore({
 
 export const wrapperStore = (): Store => store;
 
+// eslint-disable-next-line @rushstack/typedef-var
 export const wrapper = createWrapper<AppStore>(wrapperStore, {
-	debug: process.env.NODE_ENV === "production" ? false : true,
+	debug: process.env.NODE_ENV === "development",
 });

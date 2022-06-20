@@ -1,6 +1,4 @@
 import { CaseReducer, createSlice, PayloadAction, Slice } from "@reduxjs/toolkit";
-import { HYDRATE } from "next-redux-wrapper";
-
 interface CountState {
 	products: number;
 }
@@ -23,15 +21,6 @@ export const countSlice: Slice = createSlice({
 		},
 		productDecrement: (state: CountState, action: PayloadAction<number>) => {
 			state.products -= action.payload;
-		},
-	},
-	extraReducers: {
-		[HYDRATE]: (state, action) => {
-			console.log("HYDRATE", action.payload.count);
-			return {
-				...state,
-				products: action.payload.count.products,
-			};
 		},
 	},
 });

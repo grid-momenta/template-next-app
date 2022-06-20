@@ -1,21 +1,19 @@
-import { combineReducers, Reducer } from "@reduxjs/toolkit";
+import { AnyAction, combineReducers, Reducer } from "@reduxjs/toolkit";
 import { HYDRATE } from "next-redux-wrapper";
-import countReducers from "./slices/countSlice";
+import { countSlice } from "./slices/countSlice";
 import { RootState } from "./types";
 
 const rootReducer: Reducer = combineReducers({
-	count: countReducers,
+	[countSlice.name]: countSlice.reducer,
 });
 
 export default rootReducer;
 
-export const masterReducer = (state: RootState, action: any): Reducer => {
+export const masterReducer = (state: RootState, action: AnyAction): Reducer => {
 	if (action.type === HYDRATE) {
 		const nextState = {
-			...state,
-			count: {
-				products: action.payload.count.products,
-			},
+			...state, // use previous state
+			...action.payload, // apply delta from hydration
 		};
 		return nextState;
 	} else return rootReducer(state, action);
