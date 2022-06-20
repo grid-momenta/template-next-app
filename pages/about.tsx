@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Link from "next/link";
+import Link from "../utils/Link";
 
 const About: NextPage = () => {
 	return (
@@ -12,9 +12,7 @@ const About: NextPage = () => {
 			</Head>
 
 			<nav>
-				<Link href="/">
-					<a>Home</a>
-				</Link>
+				<Link href="/">Home</Link>
 			</nav>
 
 			<main>

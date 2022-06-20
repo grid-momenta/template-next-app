@@ -1,10 +1,11 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Link from "next/link";
 
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+
+import Link from "../utils/Link";
 
 const Home: NextPage = () => {
 	return (
@@ -16,9 +17,7 @@ const Home: NextPage = () => {
 			</Head>
 
 			<nav>
-				<Link href="/about">
-					<a>About</a>
-				</Link>
+				<Link href="/about">About</Link>
 			</nav>
 
 			<main>
