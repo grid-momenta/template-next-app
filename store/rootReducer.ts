@@ -14,7 +14,7 @@ export const masterReducer = (state: RootState, action: any): Reducer => {
 		const nextState = {
 			...state,
 			count: {
-				products: state.count.products + action.payload.count.products,
+				products: action.payload.count.products,
 			},
 		};
 		return nextState;
