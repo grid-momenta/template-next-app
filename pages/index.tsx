@@ -18,6 +18,10 @@ const Home: NextPage = () => {
 
 			<nav>
 				<Link href="/about">About</Link>
+				{" | "}
+				<Link href="/redux" color={"secondary"}>
+					Redux
+				</Link>
 			</nav>
 
 			<main>
