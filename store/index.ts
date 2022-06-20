@@ -1,14 +1,17 @@
-import { configureStore, EnhancedStore } from "@reduxjs/toolkit";
+import { configureStore, Store } from "@reduxjs/toolkit";
 import { createWrapper } from "next-redux-wrapper";
 import logger from "redux-logger";
-import rootReducer from "./rootReducer";
+import { masterReducer } from "./rootReducer";
+import { AppStore } from "./types";
 
-export const store: EnhancedStore = configureStore({
-	reducer: rootReducer,
+export const store: Store = configureStore({
+	reducer: masterReducer,
 	middleware: (getDefaultMiddleware) =>
 		getDefaultMiddleware({
 			serializableCheck: false,
 		}).concat(logger),
 });
 
-export const wrapper = createWrapper(() => store);
+export const wrapperStore = (): Store => store;
+
+export const wrapper = createWrapper<AppStore>(wrapperStore, { debug: true });

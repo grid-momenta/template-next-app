@@ -1,8 +1,10 @@
-import type { NextPage } from "next";
+import type { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
+import { wrapper } from "../store";
+import { productIncrement } from "../store/slices/countSlice";
 import Link from "../utils/Link";
 
-const About: NextPage = () => {
+const About: NextPage = (props) => {
 	return (
 		<div>
 			<Head>
@@ -17,6 +19,7 @@ const About: NextPage = () => {
 
 			<main>
 				<h1>About Page</h1>
+				<p>Count: {JSON.stringify(props)}</p>
 			</main>
 
 			<footer>
@@ -25,5 +28,18 @@ const About: NextPage = () => {
 		</div>
 	);
 };
+
+export const getServerSideProps: GetServerSideProps = wrapper.getServerSideProps((store) => async (context) => {
+	store.dispatch(productIncrement(5));
+	console.log("===================");
+	console.log(context);
+	console.log("===================");
+
+	return {
+		props: {
+			count: store.getState().count.products,
+		},
+	};
+});
 
 export default About;
