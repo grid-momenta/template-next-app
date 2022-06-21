@@ -22,7 +22,6 @@ export const store = configureStore({
 
 export const wrapperStore = () => store;
 
-// eslint-disable-next-line @rushstack/typedef-var
 export const wrapper = createWrapper(wrapperStore, {
 	debug: process.env.NODE_ENV === "development", // Console debug output only in development
 });
