@@ -1,14 +1,13 @@
+import { useCallback } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useAppSelector } from "../store/hooks";
+import { useAppSelector, useAppDispatch } from "../store/hooks";
 import Link from "../utils/Link";
 import { RootState } from "../store/types";
 import { productIncrement } from "../store/slices/countSlice";
-import { useDispatch } from "react-redux";
-import { useCallback } from "react";
 
 const About: NextPage = () => {
-	const dispatch = useDispatch();
+	const dispatch = useAppDispatch();
 	const products = useAppSelector((state: RootState) => state.count.products);
 
 	const handelIncrement = useCallback(() => {

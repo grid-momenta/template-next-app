@@ -34,7 +34,7 @@ export const getServerSideProps: GetServerSideProps = wrapper.getServerSideProps
 
 	return {
 		props: {
-			count: store.getState().count.products,
+			state: store.getState(),
 		},
 	};
 });
