@@ -1,4 +1,5 @@
 import { CaseReducer, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { diff } from "jsondiffpatch";
 import { HYDRATE } from "next-redux-wrapper";
 interface CountState {
 	products: number;
@@ -27,13 +28,21 @@ export const countSlice = createSlice({
 		},
 	},
 	extraReducers: {
+		// HYDRATE behavior is unstable.
+		// __NEXT_REDUX_WRAPPER_HYDRATE__ is called (SSR in about page) at least twice.
+		// Will be updated if any solution is found.
 		[HYDRATE]: (state, action) => {
-			console.log("HYDRATE", action.payload.count);
-			console.log(action.type);
-			return {
-				...state,
-				products: state.products + action.payload.count.products,
-			};
+			const clientState = { ...state };
+			const serverState = { ...action.payload };
+			// console.log("======================");
+			// console.log("serverState", serverState);
+			// console.log("clientState", clientState);
+			const stateDiff = diff(clientState, serverState);
+			// console.log("stateDiff", stateDiff);
+			const isDiff1 = stateDiff?.count?.[0]?.products;
+			// console.log("isDiff1", isDiff1);
+			// console.log("======================");
+			state.products = isDiff1 ? serverState.count.products + clientState.products : clientState.products;
 		},
 	},
 });
